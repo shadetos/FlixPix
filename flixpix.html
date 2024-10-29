@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixPix - Movie Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f1f1f, #3e3e3e);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #2a2a2a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #E50914;
+        }
+        .header p {
+            font-size: 1em;
+            color: #ccc;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .button-group button {
+            flex: 1;
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button-group button:hover {
+            background: #E50914;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #444;
+            background: #444;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .generate-button {
+            margin-top: 30px;
+            background: #E50914;
+            border: none;
+            color: #fff;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .generate-button:hover {
+            background: #b5070f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FlixPix</h1>
+            <p>Your ticket to the best movie recommendations.</p>
+        </div>
+
+        <div class="question">
+            <h2>How much time do you have?</h2>
+            <div class="button-group">
+                <button>90 minutes</button>
+                <button>2 hours</button>
+                <button>3+ hours</button>
+                <button>Any</button>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>What type of movie are you in the mood for?</h2>
+            <select>
+                <option value="">Select Genre</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="animation">Animation</option>
+                <option value="comedy">Comedy</option>
+                <option value="crime">Crime</option>
+                <option value="documentary">Documentary</option>
+                <option value="drama">Drama</option>
+                <option value="family">Family</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="scifi">Science Fiction (Sci-Fi)</option>
+                <option value="thriller">Thriller</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <h2>Do you have a preference for when the movie was released?</h2>
+            <div class="button-group">
+                <button>Classic (before 1990)</button>
+                <button>90s</button>
+                <button>2000s</button>
+                <button>Recent (2010+)</button>
+                <button>No preference</button>
+            </div>
+        </div>
+
+        <button class="generate-button">Generate</button>
+    </div>
+</body>
+</html>
