@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixPix - Movie Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f1f1f, #3e3e3e);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding-top: 40px;
+        }
+        .container {
+            background: #2a2a2a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #E50914;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+        }
+        .catchy-text {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+        .back-button {
+            background: #1c1c1c;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .back-button:hover {
+            background: #E50914;
+        }
+        .movie-card {
+            background: #3e3e3e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .movie-card img {
+            width: 240px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .movie-details {
+            flex: 1;
+        }
+        .movie-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .movie-description {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: #444;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8em;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+            color: #f9c900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://via.placeholder.com/100" alt="FlixPix Logo" class="logo">
+        <div class="header">
+            <h1>FlixPix Recommendations</h1>
+        </div>
+        
+        <div class="catchy-text">
+            Find your next favorite movie from our top picks!
+        </div>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.history.back()">
+            <span>↻</span> Refresh Recommendations
+        </button>
+        
+        <!-- Movie Card 1 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
+            <div class="movie-details">
+                <div class="movie-title">The Grand Adventure</div>
+                <div class="movie-description">A thrilling journey through space and time that challenges everything we know about reality.</div>
+                <div class="tags">
+                    <span class="tag">Sci-Fi</span>
+                    <span class="tag">2023</span>
+                    <span class="tag">Sarah Chen</span>
+                </div>
+            </div>
+            <div class="rating">
+                ⭐ 4.8
+            </div>
+        </div>
+
+        <!-- Movie Card 2 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
+            <div class="movie-details">
+                <div class="movie-title">Mystery at Dawn</div>
+                <div class="movie-description">An intriguing tale of suspense and mystery that keeps you guessing until the very end.</div>
+                <div class="tags">
+                    <span class="tag">Mystery</span>
+                    <span class="tag">2021</span>
+                    <span class="tag">John Doe</span>
+                </div>
+            </div>
+            <div class="rating">
+                ⭐ 4.5
+            </div>
+        </div>
+
+        <!-- Movie Card 3 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
+            <div class="movie-details">
+                <div class="movie-title">Comedy Nights</div>
+                <div class="movie-description">Laugh your heart out with this delightful comedy that showcases life’s funniest moments.</div>
+                <div class="tags">
+                    <span class="tag">Comedy</span>
+                    <span class="tag">2022</span>
+                    <span class="tag">Jane Smith</span>
+                </div>
+            </div>
+            <div class="rating">
+                ⭐ 4.3
+            </div>
+        </div>
+    </div>
+</body>
+</html>
