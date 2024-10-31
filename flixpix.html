@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlixPix - Movie Recommendations</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/movieofthenight/ts-streaming-availability@v4.4.0/bundle.min.js"></script>
+    <script type="module" src="assets/script.js"></script>
 </head>
 
-<body class="flex justify-center items-center bg-gradient-to-r from-gray-600 via-gray-800 to-gray-950 m-0">
-    <div class="bg-slate-800 p-40 rounded-lg shadow-lg w-full max-w-screen-sm text-slate-50">
+<body
+    class="flex justify-center items-center bg-gradient-to-br from-slate-500 via-slate-600 to-slate-700 m-0 p-10 min-h-screen">
+    <div class="bg-slate-800 p-40 rounded-lg shadow-2xl shadow-slate-950 w-full max-w-screen-lg text-slate-50">
         <div class="text-center mb-10">
+            <img src="assets/rb_13053.png" alt="FlixPix Logo" class="block my-0 mx-auto w-40">
             <h1 class="text-4xl text-red-600">FlixPix</h1>
             <p class="text-base text-gray-400">Your ticket to the best movie recommendations.</p>
         </div>
@@ -18,13 +22,17 @@
         <div class="mb-5">
             <h2 class="text-lg mb-4">How much time do you have?</h2>
             <div class="flex flex-wrap gap-2.5">
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">90
+                <button data-value="90" id="ninty-min"
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">90
                     minutes</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">2
+                <button data-value="2" id="two-hours"
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">2
                     hours</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">3+
+                <button data-value="3+" id="three-plus-hours"
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">3+
                     hours</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Any</button>
+                <button data-value="Any" id="any"
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Any</button>
             </div>
         </div>
 
@@ -52,18 +60,24 @@
         <div class="mb-5">
             <h2 class="text-lg mb-4">Do you have a preference for when the movie was released?</h2>
             <div class="flex flex-wrap gap-2.5">
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Classic
+                <button
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Classic
                     (before 1990)</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">90s</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">2000s</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Recent
+                <button
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">90s</button>
+                <button
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">2000s</button>
+                <button
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Recent
                     (2010+)</button>
-                <button class="bg-slate-600 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">No
+                <button
+                    class="transition ease-in-out delay-150 bg-slate-600 hover:-translate-y-1 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">No
                     preference</button>
             </div>
         </div>
 
-        <button class="mt-5 bg-red-600 w-full p-4 rounded-xl text-xl hover:bg-red-700">Generate</button>
+        <button
+            class="transition ease-in-out delay-150 bg-red-600 w-full p-4 rounded-xl text-xl hover:-translate-y-1 hover:bg-red-700">Generate</button>
     </div>
 </body>
 

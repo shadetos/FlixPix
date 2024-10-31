@@ -5,194 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlixPix - Movie Recommendations</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1f1f1f, #3e3e3e);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            margin: 0;
-            padding-top: 40px;
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        .container {
-            background: #2a2a2a;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            color: #E50914;
-        }
-
-        .logo {
-            display: block;
-            margin: 0 auto 20px;
-            width: 100px;
-        }
-
-        .catchy-text {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            color: #ccc;
-        }
-
-        .back-button {
-            background: #1c1c1c;
-            border: none;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 1em;
-            margin-bottom: 20px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .back-button:hover {
-            background: #E50914;
-        }
-
-        .movie-card {
-            background: #3e3e3e;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .movie-card img {
-            width: 240px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .movie-details {
-            flex: 1;
-        }
-
-        .movie-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .movie-description {
-            font-size: 0.9em;
-            color: #ccc;
-            margin-bottom: 15px;
-        }
-
-        .tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background: #444;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 0.8em;
-        }
-
-        .rating {
-            display: flex;
-            align-items: center;
-            font-size: 1.2em;
-            color: #f9c900;
-        }
-    </style>
 </head>
 
-<body>
-    <div class="container">
-        <img src="https://via.placeholder.com/100" alt="FlixPix Logo" class="logo">
-        <div class="header">
-            <h1>FlixPix Recommendations</h1>
+<body
+    class="flex justify-center items-center bg-gradient-to-br from-slate-500 via-slate-600 to-slate-700 m-0 p-10 min-h-screen">
+    <div class="bg-slate-900 p-40 rounded-lg shadow-2xl shadow-slate-950 w-full max-w-screen-lg text-slate-50">
+        <img src="assets/rb_13053.png" alt="FlixPix Logo" class="block my-0 mx-auto w-40">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl text-red-600">FlixPix Recommendations</h1>
         </div>
 
-        <div class="catchy-text">
+        <div class="text-center text-base text-gray-400">
             Find your next favorite movie from our top picks!
         </div>
 
         <!-- Back Button -->
-        <button class="back-button" onclick="window.history.back()">
+        <button
+            class="bg-slate-950 text-slate-50 py-2.5 px-4 rounded-xl flex justify-center align-center mb-5 mx-auto w-full gap-2.5"
+            onclick="window.history.back()">
             <span>↻</span> Refresh Recommendations
         </button>
 
         <!-- Movie Card 1 -->
-        <div class="movie-card">
-            <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
-            <div class="movie-details">
-                <div class="movie-title">The Grand Adventure</div>
-                <div class="movie-description">A thrilling journey through space and time that challenges everything we
+        <div class="bg-slate-700 p-5 rounded-xl mb-5 flex gap-5 align-center shadow-md">
+            <img src="https://via.placeholder.com/720x360" alt="Movie Poster" class="block my-0 mx-auto w-40">
+            <div class="flex-1">
+                <div class="mb-2.5 text-2xl">The Grand Adventure</div>
+                <div class="text-sm mb-4 text-slate-50">A thrilling journey through space and time that challenges
+                    everything we
                     know about reality.</div>
-                <div class="tags">
-                    <span class="tag">Sci-Fi</span>
-                    <span class="tag">2023</span>
-                    <span class="tag">Sarah Chen</span>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">Sci-Fi</span>
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">2023</span>
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">Sarah Chen</span>
                 </div>
             </div>
-            <div class="rating">
+            <div class="flex items-center text-xl text-yellow-300">
                 ⭐ 4.8
             </div>
         </div>
 
         <!-- Movie Card 2 -->
-        <div class="movie-card">
-            <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
-            <div class="movie-details">
-                <div class="movie-title">Mystery at Dawn</div>
-                <div class="movie-description">An intriguing tale of suspense and mystery that keeps you guessing until
+        <div class="bg-slate-700 p-5 rounded-xl mb-5 flex gap-5 align-center shadow-md">
+            <img src="https://via.placeholder.com/720x360" alt="Movie Poster" class="block my-0 mx-auto w-40">
+            <div class="flex-1">
+                <div class="mb-2.5 text-2xl">Mystery at Dawn</div>
+                <div class="text-sm mb-4 text-slate-50">An intriguing tale of suspense and mystery that keeps you
+                    guessing until
                     the very end.</div>
-                <div class="tags">
-                    <span class="tag">Mystery</span>
-                    <span class="tag">2021</span>
-                    <span class="tag">John Doe</span>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">Mystery</span>
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">2021</span>
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">John Doe</span>
                 </div>
             </div>
-            <div class="rating">
+            <div class="flex items-center text-xl text-yellow-300">
                 ⭐ 4.5
             </div>
         </div>
 
         <!-- Movie Card 3 -->
-        <div class="movie-card">
-            <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
-            <div class="movie-details">
-                <div class="movie-title">Comedy Nights</div>
-                <div class="movie-description">Laugh your heart out with this delightful comedy that showcases life’s
+        <div class="bg-slate-700 p-5 rounded-xl mb-5 flex gap-5 align-center shadow-md">
+            <img src="https://via.placeholder.com/720x360" alt="Movie Poster" class="block my-0 mx-auto w-40">
+            <div class="flex-1">
+                <div class="mb-2.5 text-2xl">Comedy Nights</div>
+                <div class="text-sm mb-4 text-slate-50">Laugh your heart out with this delightful comedy that showcases
+                    life’s
                     funniest moments.</div>
-                <div class="tags">
-                    <span class="tag">Comedy</span>
-                    <span class="tag">2022</span>
-                    <span class="tag">Jane Smith</span>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">Comedy</span>
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">2022</span>
+                    <span class="bg-slate-800 px-1 py-2.5 rounded-xl text-xs">Jane Smith</span>
                 </div>
             </div>
-            <div class="rating">
+            <div class="flex items-center text-xl text-yellow-300">
                 ⭐ 4.3
             </div>
         </div>
