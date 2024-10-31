@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
             margin: 0;
             padding-top: 40px;
         }
+
         .container {
             background: #2a2a2a;
             padding: 40px;
@@ -24,25 +26,30 @@
             max-width: 800px;
             width: 100%;
         }
+
         .header {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .header h1 {
             font-size: 2.5em;
             color: #E50914;
         }
+
         .logo {
             display: block;
             margin: 0 auto 20px;
             width: 100px;
         }
+
         .catchy-text {
             text-align: center;
             margin-bottom: 20px;
             font-size: 1.1em;
             color: #ccc;
         }
+
         .back-button {
             background: #1c1c1c;
             border: none;
@@ -61,9 +68,11 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .back-button:hover {
             background: #E50914;
         }
+
         .movie-card {
             background: #3e3e3e;
             padding: 20px;
@@ -74,34 +83,41 @@
             gap: 20px;
             align-items: center;
         }
+
         .movie-card img {
             width: 240px;
             border-radius: 10px;
             object-fit: cover;
         }
+
         .movie-details {
             flex: 1;
         }
+
         .movie-title {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
+
         .movie-description {
             font-size: 0.9em;
             color: #ccc;
             margin-bottom: 15px;
         }
+
         .tags {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
+
         .tag {
             background: #444;
             padding: 5px 10px;
             border-radius: 10px;
             font-size: 0.8em;
         }
+
         .rating {
             display: flex;
             align-items: center;
@@ -110,13 +126,14 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <img src="https://via.placeholder.com/100" alt="FlixPix Logo" class="logo">
         <div class="header">
             <h1>FlixPix Recommendations</h1>
         </div>
-        
+
         <div class="catchy-text">
             Find your next favorite movie from our top picks!
         </div>
@@ -125,13 +142,14 @@
         <button class="back-button" onclick="window.history.back()">
             <span>↻</span> Refresh Recommendations
         </button>
-        
+
         <!-- Movie Card 1 -->
         <div class="movie-card">
             <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
             <div class="movie-details">
                 <div class="movie-title">The Grand Adventure</div>
-                <div class="movie-description">A thrilling journey through space and time that challenges everything we know about reality.</div>
+                <div class="movie-description">A thrilling journey through space and time that challenges everything we
+                    know about reality.</div>
                 <div class="tags">
                     <span class="tag">Sci-Fi</span>
                     <span class="tag">2023</span>
@@ -148,7 +166,8 @@
             <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
             <div class="movie-details">
                 <div class="movie-title">Mystery at Dawn</div>
-                <div class="movie-description">An intriguing tale of suspense and mystery that keeps you guessing until the very end.</div>
+                <div class="movie-description">An intriguing tale of suspense and mystery that keeps you guessing until
+                    the very end.</div>
                 <div class="tags">
                     <span class="tag">Mystery</span>
                     <span class="tag">2021</span>
@@ -165,7 +184,8 @@
             <img src="https://via.placeholder.com/720x360" alt="Movie Poster">
             <div class="movie-details">
                 <div class="movie-title">Comedy Nights</div>
-                <div class="movie-description">Laugh your heart out with this delightful comedy that showcases life’s funniest moments.</div>
+                <div class="movie-description">Laugh your heart out with this delightful comedy that showcases life’s
+                    funniest moments.</div>
                 <div class="tags">
                     <span class="tag">Comedy</span>
                     <span class="tag">2022</span>
@@ -178,4 +198,5 @@
         </div>
     </div>
 </body>
+
 </html>
