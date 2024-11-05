@@ -25,3 +25,13 @@ FlixPix is a web application that provides personalized movie recommendations ba
 
 - A modern web browser (Chrome, Firefox, Safari, Edge).
 - A TMDb API key. Sign up for a free account and obtain an API key from [TMDb's website](https://www.themoviedb.org/).
+
+## Screenshots
+
+<img width="1184" alt="Screenshot 2024-11-04 at 6 48 40 PM" src="https://github.com/user-attachments/assets/afc0a971-96b9-47ba-9b5a-28f9c4e0b61b">
+
+<img width="1123" alt="Screenshot 2024-11-04 at 6 49 10 PM" src="https://github.com/user-attachments/assets/2cfff599-0c4b-4096-9e81-2cf102e55409">
+
+## Links
+
+https://shadetos.github.io/FlixPix/
