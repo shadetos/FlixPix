@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlixPix - Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript file -->
+    <script defer src="script.js"></script>
+</head>
+<body class="flex justify-center items-center bg-gradient-to-br from-slate-500 via-slate-600 to-slate-700 m-0 p-10 min-h-screen">
+    <div class="bg-slate-800 p-20 rounded-lg shadow-2xl shadow-slate-950 w-full max-w-screen-lg text-slate-50">
+        <div class="text-center mb-10">
+            <!-- Logo Image -->
+            <img src="assets/rb_13053.png" alt="FlixPix Logo" class="block my-0 mx-auto w-40">
+            <h1 class="text-4xl text-red-600">FlixPix</h1>
+            <p class="text-base text-gray-400">Your ticket to the best movie recommendations.</p>
+        </div>
+
+        <form id="recommendation-form">
+            <!-- Time Preference -->
+            <div class="mb-5">
+                <h2 class="text-lg mb-4">How much time do you have?</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <button type="button" id="time-90" data-value="90" class="time-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">90 minutes</button>
+                    <button type="button" id="time-120" data-value="120" class="time-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">2 hours</button>
+                    <button type="button" id="time-180" data-value="180" class="time-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">3+ hours</button>
+                    <button type="button" id="time-any" data-value="Any" class="time-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Any</button>
+                </div>
+            </div>
+
+            <!-- Genre Selection -->
+            <div class="mb-5">
+                <h2 class="text-lg mb-4">What type of movie are you in the mood for?</h2>
+                <select id="genre" name="genre" class="w-full p-2.5 rounded-lg border-2 border-slate-950 bg-slate-600 text-base cursor-pointer">
+                    <option value="">Select Genre</option>
+                    <!-- Genre Options -->
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Documentary">Documentary</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Family">Family</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="History">History</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Music">Music</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="TV Movie">TV Movie</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="War">War</option>
+                    <option value="Western">Western</option>
+                </select>
+            </div>
+
+            <!-- Release Date Preference -->
+            <div class="mb-5">
+                <h2 class="text-lg mb-4">Do you have a preference for when the movie was released?</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <button type="button" id="pref-before1990" data-value="before1990" class="preference-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Classic (before 1990)</button>
+                    <button type="button" id="pref-1990s" data-value="1990s" class="preference-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">90s</button>
+                    <button type="button" id="pref-2000s" data-value="2000s" class="preference-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">2000s</button>
+                    <button type="button" id="pref-2010+" data-value="2010+" class="preference-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">Recent (2010+)</button>
+                    <button type="button" id="pref-noPreference" data-value="noPreference" class="preference-button bg-slate-600 text-gray-200 hover:bg-red-600 flex rounded-3xl py-2.5 px-4 cursor-pointer">No preference</button>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="bg-red-600 w-full p-4 rounded-xl text-xl hover:bg-red-700">Generate</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="mt-5 text-center text-lg text-gray-300 hidden"></div>
+    </div>
+</body>
+</html>
